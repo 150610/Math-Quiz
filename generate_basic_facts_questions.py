@@ -1,19 +1,5 @@
 import random
 
-def int_check(question,):
-
-    # if not an integer
-    error = "Please enter an integer"
-
-    while True:
-        response = input(question).lower()
-
-        if response == 'xxx':
-            return response
-
-        else:
-            print(error)
-
 
 def generate_basic_add_sub_problem():
     # Generate random numbers
@@ -62,7 +48,7 @@ def generate_basic_multiplication_problem():
 
 # test question for add/sub
 quest, ans = generate_basic_add_sub_problem()
-user_answer = int_check(f"What is {quest}? ")
+user_answer = int(input(f"What is {quest}? "))
 
 if user_answer == ans:
     print("Correct!")
@@ -72,7 +58,7 @@ else:
 
 # test question for division
 quest, ans = generate_basic_division_problem()
-user_answer = int_check(f"What is {quest}? ")
+user_answer = int(input(f"What is {quest}? "))
 
 if user_answer == ans:
     print("Correct!")
@@ -81,7 +67,7 @@ else:
 
 # test question for multiplication
 quest, ans = generate_basic_multiplication_problem()
-user_answer = int_check(f"What is {quest}? ")
+user_answer = int(input(f"What is {quest}? "))
 
 if user_answer == ans:
     print("Correct!")
