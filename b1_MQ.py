@@ -4,7 +4,7 @@ def round_check(question):
 # make sure that rounds is more than 0
 
     while True:
-       error = "Please enter an integer more than or equal to 1"
+       error = "Please enter an integer more than 0"
 
        response = input(question)
 
@@ -45,7 +45,6 @@ def int_check(question):
         except ValueError:
             print(error)
             return "error"
-
 
 
 def yes_no(question):
@@ -153,8 +152,8 @@ def generate_linear_equation_add_sub_problem():
 def generate_linear_equation_divi_multi_problem():
     variable_answer = 0
     # Generate random numbers
-    num1 = random.randint(0, 12)
-    num2 = random.randint(0, 12)
+    num1 = random.randint(1, 12)
+    num2 = random.randint(1, 12)
     operator = random.choice(['/', '*'])
 
     # make sure division will give whole numbers
@@ -371,3 +370,5 @@ if rounds_played > 0:
     # end
     print("\nThanks for playing!")
 
+if rounds_played == 0:
+    print("\nYou chickened out, and did not play any rounds 🐔")
